@@ -37,8 +37,7 @@ class FirstFragment : Fragment() {
                 .setPopExitAnim(R.anim.h_fragment_pop_exit)
                 .build()
             Navigation.findNavController(it)
-                .navigate(R.id.action_page_third, mBundle, mBuilder)
-            Navigation.findNavController(it).navigate(R.id.action_page_second, mBundle, mBuilder)
+                .navigate(R.id.action_page_second, mBundle, mBuilder)
         }
     }
 
