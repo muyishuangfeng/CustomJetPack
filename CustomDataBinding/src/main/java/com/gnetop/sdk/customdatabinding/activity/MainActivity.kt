@@ -1,7 +1,8 @@
-package com.gnetop.sdk.customdatabinding
+package com.gnetop.sdk.customdatabinding.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.gnetop.sdk.customdatabinding.R
 
 class MainActivity : AppCompatActivity() {
 
