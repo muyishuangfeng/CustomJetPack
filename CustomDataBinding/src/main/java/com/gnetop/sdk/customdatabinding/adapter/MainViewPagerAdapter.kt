@@ -30,4 +30,8 @@ class MainViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) 
 
     override fun getItemCount(): Int = fragments.size
 
+
+
+
+
 }
