@@ -46,11 +46,17 @@ class MainFragment : Fragment() {
         true
     }
 
+    /**
+     * 设置临时选中
+     */
     private fun setCurrentItem(position: Int) {
         viewPager2.setCurrentItem(position, true)
 
     }
 
+    /**
+     * 设置viewPager2事件
+     */
     private fun initEvent() {
         viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
