@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.gnetop.sdk.customdatabinding.R
 import com.gnetop.sdk.customdatabinding.adapter.*
@@ -83,12 +84,9 @@ class MainFragment : Fragment() {
                         bottomNavigationView.menu.getItem(position).isChecked=true
                     }
                 }
-
-
             }
-
-
         })
-
     }
+
+
 }

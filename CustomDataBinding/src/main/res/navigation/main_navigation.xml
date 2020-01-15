@@ -20,5 +20,9 @@
         android:id="@+id/detail_fragment"
         tools:layout="@layout/fragment_detail"
         android:name="com.gnetop.sdk.customdatabinding.fragment.DetailFragment"/>
+    <fragment
+        android:id="@+id/login_Fragment"
+        android:name="com.gnetop.sdk.customdatabinding.fragment.LoginFragment"
+        tools:layout="@layout/fragment_login" />
 
 </navigation>
