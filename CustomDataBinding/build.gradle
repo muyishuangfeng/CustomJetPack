@@ -28,7 +28,6 @@ android {
     }
 
 
-
 }
 
 dependencies {
@@ -49,5 +48,10 @@ dependencies {
     //Navigation(导航)
     implementation "android.arch.navigation:navigation-fragment:1.0.0"
     implementation "android.arch.navigation:navigation-ui:1.0.0"
+    // liveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0"
+    // viewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
 }
