@@ -1,6 +1,7 @@
 package com.gnetop.sdk.customroom.model
 
 import androidx.room.*
+import java.util.*
 
 /**
  * 用户表
@@ -39,7 +40,7 @@ data class Address(val street: String, val state: Int, val city: String, val pos
 data class FavouriteShoe(
     @ColumnInfo(name = "shoe_id") val shoeID: Long,//外键 鞋子的ID
     @ColumnInfo(name = "user_id") val userID: Long, //外键 用户的ID
-    @ColumnInfo(name = "fav_date") val favDate: String //创建日期
+    @ColumnInfo(name = "fav_date") val favDate: Date //创建日期
 ) {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
