@@ -1,2 +1,2 @@
-include ':app', ':CustomDataBinding', ':CustomRoom'
+include ':app', ':CustomDataBinding', ':CustomRoom', ':CustomWorkManager'
 rootProject.name='JetPack'

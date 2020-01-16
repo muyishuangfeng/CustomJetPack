@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/CustomDataBinding" />
             <option value="$PROJECT_DIR$/CustomRoom" />
+            <option value="$PROJECT_DIR$/CustomWorkManager" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
