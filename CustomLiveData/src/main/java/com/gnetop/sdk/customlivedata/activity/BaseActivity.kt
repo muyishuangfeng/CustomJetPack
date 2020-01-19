@@ -6,13 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.gnetop.sdk.customlivedata.bus.LiveDataBus
+import com.gnetop.sdk.customlivedata.util.Constants
 import com.gnetop.sdk.customlivedata.viewmodel.Event
 import com.gnetop.sdk.customlivedata.viewmodel.EventModel
 
 abstract class BaseActivity : AppCompatActivity() {
 
     lateinit var mEventModel: EventModel
-    var mEvent: Event? = null
+    lateinit var mEvent: Event
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +40,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        mEvent = Event(0, "")
+        mEvent = Event()
         mEventModel = ViewModelProviders.of(this, EventModel.CustomFactory(mEvent!!))
             .get<EventModel>(EventModel::class.java)
     }
@@ -63,7 +67,11 @@ abstract class BaseActivity : AppCompatActivity() {
      * 发送消息
      */
     fun sendMsg(code: Int, msg: String) {
-        mEvent = Event(code, msg)
+        mEvent = Event()
+        mEvent.msg = msg
+        mEvent.code = code
         mEventModel.getEventMode().value = mEvent
     }
+
+
 }
