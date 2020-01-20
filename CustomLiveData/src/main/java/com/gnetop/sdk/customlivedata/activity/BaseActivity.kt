@@ -41,7 +41,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private fun init() {
         mEvent = Event()
-        mEventModel = ViewModelProviders.of(this, EventModel.CustomFactory(mEvent!!))
+        mEventModel = ViewModelProviders.of(this, EventModel.CustomFactory(mEvent))
             .get<EventModel>(EventModel::class.java)
     }
 

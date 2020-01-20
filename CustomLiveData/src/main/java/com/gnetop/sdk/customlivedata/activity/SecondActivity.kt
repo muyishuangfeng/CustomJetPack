@@ -30,6 +30,7 @@ class SecondActivity : BaseActivity(), View.OnClickListener {
         btn_send2.setOnClickListener(this)
         btn_send3.setOnClickListener(this)
         LiveDataBus
+            .getInstance()
             .get<Event>(Constants.MSG_SEND_NAME)
             .observeSticky(this, mObserver)
 
@@ -54,6 +55,7 @@ class SecondActivity : BaseActivity(), View.OnClickListener {
     override fun onDestroy() {
         super.onDestroy()
         LiveDataBus
+            .getInstance()
             .get<Event>(Constants.MSG_SEND_NAME)
             .removeObserver(mObserver)
     }

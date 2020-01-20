@@ -20,6 +20,7 @@ class ThirdActivity : BaseActivity() {
     override fun initView() {
         btn_send.setOnClickListener {
             LiveDataBus
+                .getInstance()
                 .get<String>(Constants.MSG_SEND_NAME)
                 .postValue(edt_send_content.text.toString())
 
@@ -29,6 +30,7 @@ class ThirdActivity : BaseActivity() {
             mEvent.code = 123
             mEvent.msg = "=====456======"
             LiveDataBus
+                .getInstance()
                 .get<Event>(Constants.MSG_SEND_NAME)
                 .postValue(mEvent)
 
@@ -38,6 +40,7 @@ class ThirdActivity : BaseActivity() {
             mEvent.code = 456
             mEvent.msg = "=====789======"
             LiveDataBus
+                .getInstance()
                 .of(EventListener::class.java)
                 .event()
                 .postValue(mEvent)
@@ -51,18 +54,21 @@ class ThirdActivity : BaseActivity() {
 
         btn_subject.setOnClickListener {
             LiveDataBus
+                .getInstance()
                 .get<String>(Constants.MSG_SEND_NAME)
                 .observe(this, observer)
         }
 
         btn_unSubject.setOnClickListener {
             LiveDataBus
+                .getInstance()
                 .get<String>(Constants.MSG_SEND_NAME)
                 .removeObserver(observer)
             txt_result.text = ""
         }
 
         LiveDataBus
+            .getInstance()
             .get<Event>(Constants.MSG_SEND_NAME)
             .observe(this, Observer {
                 txt_result.text = it.toString()
